@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import TransitionPage from "@/components/transitionPage";
 import { cubicBezier, motion } from "framer-motion";
 
@@ -10,7 +9,7 @@ export default function Home() {
       top: 100,
       clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)",
     },
-    whileInView: {
+    animate: {
       top: 0,
       clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
       transition: {
@@ -24,36 +23,36 @@ export default function Home() {
   return (
     <main className="">
       <TransitionPage />
-        <div className="flex flex-col justify-between h-[70vh] mt-[5vh]">
-          <div className="flex px-1 justify-between items-end">
-            <div className="leading-[130px]">
+        <div className="flex flex-col justify-around h-[90vh] mt-[5vh]">
+          <div className="flex px-1 justify-between items-end max-sm:flex-col max-sm:items-center max-sm:justify-between">
+            <div className="leading-[130px] max-sm:leading-none">
               <motion.h1
-                className="relative text-[150px] font-bold tracking-tighter"
+                className="relative text-[150px] font-bold tracking-tighter max-sm:text-[90px]"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
                 FREELAN
               </motion.h1>
               <motion.h1
-                className="relative text-[150px] font-bold tracking-tighter flex items-baseline gap-4"
+                className="relative text-[150px] font-bold tracking-tighter flex items-baseline gap-4 max-sm:text-[90px]"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
                 TECH{" "}
-                <p className="text-[17px] leading-none tracking-normal font-medium">
+                <p className="text-[17px] leading-none tracking-normal font-medium max-sm:text-[15px]">
                   JUST LEAVE IT ON US
                 </p>
               </motion.h1>
             </div>
 
-            <div className="w-[30vw] text-[17px]">
+            <div className="w-[30vw] text-[17px] max-sm:w-full max-sm:px-4 max-sm:text-[15px] max-sm:mt-4">
               <motion.p
                 className="relative"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
                 Creativity meets technology to fuel your business growth. Let’s
                 turn your digital dreams into reality, one strategy at a time.
@@ -61,13 +60,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-between items-end px-4">
-            <div className="font-medium text-[20px]">
+          <div className="flex justify-between flex-row-reverse items-end px-4 max-sm:flex-col max-sm:justify-between max-sm:h-[15vh]">
+            <div className="font-semibold text-[35px] text-right max-sm:text-[25px] max-sm:leading-none">
               <motion.p
                 className="relative"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
                 WEB DESIGN
               </motion.p>
@@ -75,7 +74,7 @@ export default function Home() {
                 className="relative"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
                 WEB DEVELOPMENT
               </motion.p>
@@ -83,20 +82,20 @@ export default function Home() {
                 className="relative"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
                 SEARCH ENGINE OPTIMIZATION
               </motion.p>
             </div>
 
-            <div className="text-[17px]">
+            <div className="text-[17px] max-sm:text-[15px] max-sm:self-start">
               <motion.p
                 className="relative"
                 variants={textVar}
                 initial="initial"
-                whileInView="whileInView"
+                animate="animate"
               >
-                BENGALURU, KARNATAKA
+                BENGALURU, INDIA
               </motion.p>
             </div>
           </div>
