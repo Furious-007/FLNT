@@ -4,7 +4,7 @@ import Link from "next/link";
 import TransitionPage from "@/components/transitionPage";
 import { motion, cubicBezier } from "framer-motion";
 
-export default function Services() {
+export default function Contact() {
   const textVar = {
     initial: {
       top: 100,
@@ -30,7 +30,7 @@ export default function Services() {
         initial="initial"
         whileInView="whileInView"
       >
-        SERVICES
+        CONTACT
       </motion.p>
     </div>
   );
