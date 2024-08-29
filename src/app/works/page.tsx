@@ -1,7 +1,6 @@
 "use client";
 
 import TransitionPage from "@/components/transitionPage";
-import Link from "next/link";
 import { motion, cubicBezier } from "framer-motion";
 
 export default function Works() {

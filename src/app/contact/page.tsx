@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import TransitionPage from "@/components/transitionPage";
 import { motion, cubicBezier } from "framer-motion";
 
