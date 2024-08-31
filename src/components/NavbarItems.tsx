@@ -4,22 +4,22 @@ import { useState } from "react";
 
 export default function NavbarItems() {
   const [menu, setMenu] = useState(true);
+  const [flex, setFlex] = useState("")
   const { scrollY } = useScroll();
-  let flexStyle;
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 20) {
       setMenu(false);
-      flexStyle = "flex justify-between items-center"
+      setFlex("flex justify-between gap-4 items-center")
     } else {
       setMenu(true);
-      flexStyle = ""
+      setFlex("")
     }
   });
 
   return (
-    <div className="flex gap-9 text-[15px] font-semibold">
-      <ul className={`${flexStyle}`}>
+    <div className="flex gap-9 text-[15px] font-semibold mix-blend-difference">
+      <ul className={flex}>
         <li>
           <Link href={"/"}>HOME</Link>
         </li>
