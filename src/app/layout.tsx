@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import LenisConfig from "@/utils/Lenis";
 
 const helvetica = localFont({
   src: [
@@ -9,7 +10,7 @@ const helvetica = localFont({
       path: "../../fonts/helvetica/HelveticaNowDisplay-Thin.woff2",
       weight: "300",
       style: "normal",
-    },  
+    },
     {
       path: "../../fonts/helvetica/HelveticaNowDisplay-Regular.woff2",
       weight: "400",
@@ -45,8 +46,10 @@ const helvetica = localFont({
 
 export const metadata: Metadata = {
   title: "FLNT",
-  description: "FreeLan Tech is here to solve your boring web design and SEO problems",
+  description:
+    "FreeLan Tech is here to solve your boring web design and SEO problems",
 };
+
 
 export default function RootLayout({
   children,
@@ -56,8 +59,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={helvetica.className}>
+        {/* <LenisConfig /> */}
         <Navbar />
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }
